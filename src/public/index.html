@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Тег FORM</title>
+  </head>
+  <body>
+    <button id="button">Make request</button>
+    <script>
+      const button = document.getElementById("button");
+
+      button.onclick = () => {
+        fetch("https://w6wtj.sse.codesandbox.io/weather?lat=10&lon=10")
+          .then((res) => res.json())
+          .then((res) => {
+            console.info(res);
+            alert("done check console");
+          })
+          .catch((err) => console.error(err));
+      };
+    </script>
+  </body>
+</html>
